@@ -1,0 +1,40 @@
+{
+  "name": "searchkit-express-proxy",
+  "version": "0.0.1",
+  "description": "Proxy for searchkit to elastic cluster",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel code/ -d build/ --source-maps",
+    "start": "node build/",
+    "serve": "nodemon code/index.js --exec babel-node",
+    "production": "babel code/ -d build/ && node build/index.js"
+  },
+  "author": "Sebastián Espinosa <sebastian@clevermachine.cl>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "searchkit-express": "^0.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sespinosa/searchkit-express-proxy.git"
+  },
+  "keywords": [
+    "es6",
+    "nodejs",
+    "babel"
+  ],
+  "bugs": {
+    "url": "https://github.com/sespinosa/searchkit-express-proxy/issues"
+  },
+  "homepage": "https://github.com/sespinosa/searchkit-express-proxy#readme"
+}
